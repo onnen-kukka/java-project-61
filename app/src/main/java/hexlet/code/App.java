@@ -1,5 +1,8 @@
 package hexlet.code;
 
+import hexlet.code.Game.Calc;
+import hexlet.code.Game.Even;
+
 import java.util.Scanner;
 
 class  App {
@@ -11,6 +14,7 @@ class  App {
 
                 1 - Greet
                 2 - Even
+                3 - Calc
                 0 - Exit
                 """);
         System.out.print("Your choice: ");
@@ -23,6 +27,10 @@ class  App {
                 break;
             case "2":
                 Even.run();
+                break;
+            case "3":
+                Calc.run();
+                break;
             case "0":
                 break;
             default:
