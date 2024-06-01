@@ -1,14 +1,12 @@
 package hexlet.code.Game;
 
 import hexlet.code.Engine;
-
 import java.util.Random;
 
 import static hexlet.code.Engine.ROUNDS_COUNT;
+import static hexlet.code.Game.Even.RANDOM_LIMIT;
 
 public class Calc {
-
-    public static final int MAX_NUMBER = 100;
 
     public static void run() {
         String[][] questions = new String[ROUNDS_COUNT][];
@@ -22,8 +20,8 @@ public class Calc {
 
     private static String[] generateRound() {
         Random random = new Random();
-        int randomNumber1 = random.nextInt(1, MAX_NUMBER);
-        int randomNumber2 = random.nextInt(1, MAX_NUMBER);
+        int randomNumber1 = random.nextInt(1, RANDOM_LIMIT);
+        int randomNumber2 = random.nextInt(1, RANDOM_LIMIT);
         char plus = '+';
         char minus = '-';
         char multiplication = '*';

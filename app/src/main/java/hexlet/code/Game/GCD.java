@@ -6,9 +6,9 @@ import java.util.Random;
 
 import static hexlet.code.Engine.ROUNDS_COUNT;
 
-public class GCD {
+import static hexlet.code.Game.Even.RANDOM_LIMIT;
 
-    public static final int MAX_NUMBER = 100;
+public class GCD {
 
     public static void run() {
         String[][] questions = new String[ROUNDS_COUNT][];
@@ -22,8 +22,8 @@ public class GCD {
 
     private static String[] generateRound() {
         Random random = new Random();
-        int randomNumber1 = random.nextInt(1, MAX_NUMBER);
-        int randomNumber2 = random.nextInt(1, MAX_NUMBER);
+        int randomNumber1 = random.nextInt(1, RANDOM_LIMIT);
+        int randomNumber2 = random.nextInt(1, RANDOM_LIMIT);
         String question = randomNumber1 + " " + randomNumber2;
         int correctAnswer = makeGreatestDivisor(randomNumber1, randomNumber2);
         return new String[] {question, String.valueOf(correctAnswer)};
