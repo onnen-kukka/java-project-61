@@ -30,7 +30,6 @@ public class Progression {
             number = number + progressionStep;
             numbers[i] = String.valueOf(number);
         }
-
         String correctAnswer = numbers[generateIndex()];
         return new String[]{Arrays.toString(makeProgressionWithHiddenChar(numbers, correctAnswer)), correctAnswer};
     }

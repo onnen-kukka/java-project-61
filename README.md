@@ -1,7 +1,12 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/onnen-kukka/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/onnen-kukka/java-project-61/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/2ba4725b7210bac67b7d/maintainability)](https://codeclimate.com/github/onnen-kukka/java-project-61/maintainability)
-[asciinema](https://asciinema.org/a/lYYo5qbd2QTQBEtyAdc8aj8P6)
+[asciinema](https://asciinema.org/a/A7GHOyj58yKvGj0EHqN1NSM7C)
+
+# Welcome to the Brain-games!
+
+This package contains 5 different brain games. Each of them will give you 3 rounds of solving numbers-based tasks.
+
 
 
 
