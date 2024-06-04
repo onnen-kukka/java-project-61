@@ -18,8 +18,8 @@ public class Engine {
             if (answer.equals(round[1])) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + round[1] + "'.\n" +
-                        "Let's try again, " + userName + "!");
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + round[1] + "'.\n"
+                        + "Let's try again, " + userName + "!");
                 return;
             }
         }

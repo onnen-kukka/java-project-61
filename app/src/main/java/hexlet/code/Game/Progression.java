@@ -1,7 +1,6 @@
 package hexlet.code.Game;
 
 import hexlet.code.Engine;
-import java.util.Arrays;
 import java.util.Random;
 
 import static hexlet.code.Game.Even.RANDOM_LIMIT;
@@ -9,6 +8,7 @@ import static hexlet.code.Game.Even.RANDOM_LIMIT;
 public class Progression {
 
     public static final int MAX_INDEX = 10;
+    public static final int PROGRESSION_STEP = 3;
 
     public static void run() {
         String[][] questions = new String[Engine.ROUNDS_COUNT][];
@@ -21,12 +21,12 @@ public class Progression {
     }
 
     private static String[] generateProgression() {
-        String[] numbers = new String[10];
-        int progressionStep = 3;
+        String[] numbers = new String[MAX_INDEX];
+        int progressionStep = PROGRESSION_STEP;
         Random random = new Random();
         int number = random.nextInt(1, RANDOM_LIMIT);
 
-        for (int i = 0; i < numbers.length; i++ ) {
+        for (int i = 0; i < numbers.length; i++) {
             number = number + progressionStep;
             numbers[i] = String.valueOf(number);
         }
@@ -50,5 +50,6 @@ public class Progression {
         }
         return result;
     }
+
 }
 
