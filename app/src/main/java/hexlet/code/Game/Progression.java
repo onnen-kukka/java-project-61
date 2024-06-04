@@ -31,7 +31,7 @@ public class Progression {
             numbers[i] = String.valueOf(number);
         }
         String correctAnswer = numbers[generateIndex()];
-        return new String[]{Arrays.toString(makeProgressionWithHiddenChar(numbers, correctAnswer)), correctAnswer};
+        return new String[]{makeProgressionWithHiddenChar(numbers, correctAnswer), correctAnswer};
     }
 
     private static int generateIndex() {
@@ -40,13 +40,15 @@ public class Progression {
         return index;
     }
 
-    private static String[] makeProgressionWithHiddenChar(String[] numbers, String correctAnswer) {
+    private static String makeProgressionWithHiddenChar(String[] numbers, String correctAnswer) {
+        String result = "";
         for (int i = 0; i < numbers.length; i++) {
            if (numbers[i].equals(correctAnswer)) {
                numbers[i] = "..";
            }
+           result += String.valueOf(numbers[i]) + " ";
         }
-        return numbers;
+        return result;
     }
 }
 
