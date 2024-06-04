@@ -19,7 +19,7 @@ public class Engine {
                 System.out.println("Correct!");
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + round[1] + "'.\n" +
-                        "Let's try again, " + userName);
+                        "Let's try again, " + userName + "!");
                 return;
             }
         }
