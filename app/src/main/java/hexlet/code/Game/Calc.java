@@ -26,8 +26,9 @@ public class Calc {
         char minus = '-';
         char multiplication = '*';
         char operator = generateOperator(plus, minus, multiplication);
-        String strRandomNumber1 = randomNumber1 + "";
-        String question = strRandomNumber1 + operator + randomNumber2;
+        String strRandomNumber1 = randomNumber1 + " ";
+        String strOperator = operator + " ";
+        String question = strRandomNumber1 + strOperator + randomNumber2;
         String correctAnswer = String.valueOf(calculate(randomNumber1, randomNumber2, operator));
         return new String[]{question, correctAnswer};
     }
