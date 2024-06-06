@@ -2,7 +2,7 @@ package hexlet.code;
 
 import hexlet.code.game.Even;
 import hexlet.code.game.Calc;
-import hexlet.code.game.gcd;
+import hexlet.code.game.Gcd;
 import hexlet.code.game.Progression;
 import hexlet.code.game.Prime;
 
@@ -38,7 +38,7 @@ class  App {
                 Calc.run();
                 break;
             case "4":
-                gcd.run();
+                Gcd.run();
                 break;
             case "5":
                 Progression.run();
