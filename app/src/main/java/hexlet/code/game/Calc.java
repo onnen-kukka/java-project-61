@@ -27,7 +27,7 @@ public class Calc {
         char minus = '-';
         char multiplication = '*';
         char[] operators = new char[]{plus, minus, multiplication};
-        int randomNumberForOperator = generateNumber(0, ROUNDS_COUNT);
+        int randomNumberForOperator = generateNumber(0, ROUNDS_COUNT - 1);
         char operator = operators[randomNumberForOperator];
         String strRandomNumber1 = randomNumber1 + " ";
         String strOperator = operator + " ";
