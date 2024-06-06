@@ -1,12 +1,14 @@
-package hexlet.code.Game;
+package hexlet.code.game;
 
 import hexlet.code.Engine;
-import java.util.Random;
 
 import static hexlet.code.Engine.ROUNDS_COUNT;
-import static hexlet.code.Game.Even.RANDOM_LIMIT;
+
+import static hexlet.code.Utils.generateNumber;
 
 public class Calc {
+
+    public static final int RANDOM_LIMIT = 100;
 
     public static void run() {
         String[][] questions = new String[ROUNDS_COUNT][];
@@ -19,13 +21,14 @@ public class Calc {
     }
 
     private static String[] generateRound() {
-        Random random = new Random();
-        int randomNumber1 = random.nextInt(1, RANDOM_LIMIT);
-        int randomNumber2 = random.nextInt(1, RANDOM_LIMIT);
+        int randomNumber1 = generateNumber(1, RANDOM_LIMIT);
+        int randomNumber2 = generateNumber(1, RANDOM_LIMIT);
         char plus = '+';
         char minus = '-';
         char multiplication = '*';
-        char operator = generateOperator(plus, minus, multiplication);
+        char[] operators = new char[]{plus, minus, multiplication};
+        int randomNumberForOperator = generateNumber(0, ROUNDS_COUNT);
+        char operator = operators[randomNumberForOperator];
         String strRandomNumber1 = randomNumber1 + " ";
         String strOperator = operator + " ";
         String question = strRandomNumber1 + strOperator + randomNumber2;
@@ -33,19 +36,12 @@ public class Calc {
         return new String[]{question, correctAnswer};
     }
 
-    private static char generateOperator(char plus, char minus, char multiplication) {
-        char[] operators = new char[]{plus, minus, multiplication};
-        Random random = new Random();
-        int randomNumberForOperator = random.nextInt(0, ROUNDS_COUNT);
-        return operators[randomNumberForOperator];
-    }
-
     private static int calculate(int randomNumber1, int randomNumber2, char operator) {
         return switch (operator) {
             case '+' -> randomNumber1 + randomNumber2;
             case '-' -> randomNumber1 - randomNumber2;
             case '*' -> randomNumber1 * randomNumber2;
-            default -> throw new RuntimeException("Unknown operation");
+            default -> throw new RuntimeException("Unknown operation " + operator);
         };
     }
 }

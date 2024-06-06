@@ -1,10 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.Game.Even;
-import hexlet.code.Game.Calc;
-import hexlet.code.Game.GCD;
-import hexlet.code.Game.Progression;
-import hexlet.code.Game.Prime;
+import hexlet.code.game.Even;
+import hexlet.code.game.Calc;
+import hexlet.code.game.gcd;
+import hexlet.code.game.Progression;
+import hexlet.code.game.Prime;
 
 import java.util.Scanner;
 
@@ -38,7 +38,7 @@ class  App {
                 Calc.run();
                 break;
             case "4":
-                GCD.run();
+                gcd.run();
                 break;
             case "5":
                 Progression.run();
@@ -50,7 +50,7 @@ class  App {
                 break;
             default:
                 break;
-            }
-            scanner.close();
         }
+        scanner.close();
     }
+}

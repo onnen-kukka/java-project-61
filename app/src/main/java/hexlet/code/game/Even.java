@@ -1,7 +1,8 @@
-package hexlet.code.Game;
+package hexlet.code.game;
 
 import hexlet.code.Engine;
-import java.util.Random;
+
+import static hexlet.code.Utils.generateNumber;
 
 public class Even {
 
@@ -18,8 +19,7 @@ public class Even {
     }
 
     private static String[] generateRound() {
-        Random random = new Random();
-        int randomNumber = random.nextInt(1, RANDOM_LIMIT);
+        int randomNumber = generateNumber(1, RANDOM_LIMIT);
         String correctAnswer = isEven(randomNumber) ? "yes" : "no";
         return new String[]{String.valueOf(randomNumber), correctAnswer};
     }

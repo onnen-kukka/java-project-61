@@ -1,14 +1,13 @@
-package hexlet.code.Game;
+package hexlet.code.game;
 
 import hexlet.code.Engine;
 
-import java.util.Random;
+import static hexlet.code.Utils.generateNumber;
 
 import static hexlet.code.Engine.ROUNDS_COUNT;
+import static hexlet.code.game.Even.RANDOM_LIMIT;
 
-import static hexlet.code.Game.Even.RANDOM_LIMIT;
-
-public class GCD {
+public class gcd {
 
     public static void run() {
         String[][] questions = new String[ROUNDS_COUNT][];
@@ -21,9 +20,8 @@ public class GCD {
     }
 
     private static String[] generateRound() {
-        Random random = new Random();
-        int randomNumber1 = random.nextInt(1, RANDOM_LIMIT);
-        int randomNumber2 = random.nextInt(1, RANDOM_LIMIT);
+        int randomNumber1 = generateNumber(1, RANDOM_LIMIT);
+        int randomNumber2 = generateNumber(1, RANDOM_LIMIT);
         String question = randomNumber1 + " " + randomNumber2;
         int correctAnswer = makeGreatestDivisor(randomNumber1, randomNumber2);
         return new String[] {question, String.valueOf(correctAnswer)};
