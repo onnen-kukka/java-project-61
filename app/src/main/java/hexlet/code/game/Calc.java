@@ -21,14 +21,14 @@ public class Calc {
     }
 
     private static String[] generateRound() {
+        final char[] operators = {'+', '-', '*'};
+
         int randomNumber1 = generateNumber(1, RANDOM_LIMIT);
         int randomNumber2 = generateNumber(1, RANDOM_LIMIT);
-        char plus = '+';
-        char minus = '-';
-        char multiplication = '*';
-        char[] operators = new char[]{plus, minus, multiplication};
-        int randomNumberForOperator = generateNumber(0, ROUNDS_COUNT - 1);
-        char operator = operators[randomNumberForOperator];
+
+        int indexOperator = generateNumber(0, ROUNDS_COUNT - 1);
+        char operator = operators[indexOperator];
+
         String strRandomNumber1 = randomNumber1 + " ";
         String strOperator = operator + " ";
         String question = strRandomNumber1 + strOperator + randomNumber2;

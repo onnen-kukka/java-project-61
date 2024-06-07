@@ -1,6 +1,7 @@
 package hexlet.code.game;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 import static hexlet.code.Utils.generateNumber;
 
@@ -19,7 +20,7 @@ public class Progression {
             int step = PROGRESSION_STEP;
             int length = MAX_INDEX + 1;
             String[] progression = makeProgression(firstNumber, step, length);
-            int hiddenMemberIndex = generateIndex();
+            int hiddenMemberIndex = Utils.generateNumber(0, length - 1);
             String answer = progression[hiddenMemberIndex];
             progression[hiddenMemberIndex] = "..";
             String question = String.join(" ", progression);
@@ -36,10 +37,6 @@ public class Progression {
         }
         return progression;
     }
-
-    private static int generateIndex() {
-        return generateNumber(0, MAX_INDEX);
-    }
-
 }
+
 
