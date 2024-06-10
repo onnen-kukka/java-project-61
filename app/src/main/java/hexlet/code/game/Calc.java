@@ -26,7 +26,7 @@ public class Calc {
         int randomNumber1 = generateNumber(1, RANDOM_LIMIT);
         int randomNumber2 = generateNumber(1, RANDOM_LIMIT);
 
-        int indexOperator = generateNumber(0, ROUNDS_COUNT - 1);
+        int indexOperator = generateNumber(0, operators.length - 1);
         char operator = operators[indexOperator];
 
         String strRandomNumber1 = randomNumber1 + " ";
